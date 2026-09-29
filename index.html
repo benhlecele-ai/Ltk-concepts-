@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LTD Concepts | Trade With Purpose</title>
+<meta name="description" content="LTD Concepts — professional renovations, waterproofing, tiling, ceilings, painting, cupboards and more. Proudly serving Durban and surrounding areas.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{navy:"#001F3F",gold:"#D4AF37"},fontFamily:{sans:["Montserrat","Poppins","sans-serif"]}}}};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<style>
+:root{--navy:#001F3F;--gold:#D4AF37;--dark:#101820}
+html{scroll-behavior:smooth}body{font-family:"Montserrat",sans-serif;color:var(--dark);overflow-x:hidden}
+.gold-line{width:60px;height:3px;background:var(--gold)}
+.hero-overlay{background:linear-gradient(90deg,rgba(0,31,63,.95) 0%,rgba(0,31,63,.82) 40%,rgba(0,31,63,.25) 100%)}
+.service-card{transition:transform .35s ease,box-shadow .35s ease}.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 45px rgba(0,31,63,.15)}
+.service-image{transition:transform .5s ease}.service-card:hover .service-image{transform:scale(1.06)}
+.nav-link{position:relative}.nav-link:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--gold);transition:width .3s}.nav-link:hover:after{width:100%}
+.calculator-input{width:100%;border:1px solid #d9dde3;border-radius:6px;padding:13px 15px;outline:none;transition:border-color .25s,box-shadow .25s;background:white}.calculator-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.12)}
+.calculator-label{display:block;margin-bottom:8px;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--navy)}
+.choice-icon{width:48px;height:48px;min-width:48px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(212,175,55,.5);color:var(--gold)}
+.quote-result{border-left:4px solid var(--gold)}
+.logo-mark{width:44px;height:44px;transform:rotate(45deg);border:3px solid var(--gold);position:relative}.logo-mark:after{content:"";position:absolute;inset:8px;border:2px solid var(--gold)}
+.mobile-menu{display:none}.mobile-menu.open{display:block}
+@media(max-width:768px){.hero-overlay{background:linear-gradient(90deg,rgba(0,31,63,.94),rgba(0,31,63,.72))}}
+</style>
+</head>
+<body>
+
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-navy/95 backdrop-blur-md text-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-8"><div class="h-20 flex items-center justify-between">
+<a href="#home" class="flex items-center gap-4"><div class="logo-mark"></div><div><div class="font-extrabold tracking-wide text-lg">LTD <span class="text-gold">CONCEPTS</span></div><div class="text-[9px] tracking-[0.25em] text-gray-300">TRADE WITH PURPOSE</div></div></a>
+<nav class="hidden lg:flex items-center gap-8 text-sm font-semibold"><a href="#home" class="nav-link">Home</a><a href="#about" class="nav-link">About</a><a href="#services" class="nav-link">Services</a><a href="#calculator" class="nav-link">Rough Quote</a><a href="#contact" class="nav-link">Contact</a></nav>
+<div class="hidden lg:flex items-center gap-4"><a href="https://wa.me/27670558515" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-white hover:text-gold transition"><i class="fa-brands fa-whatsapp text-xl"></i></a><a href="#" aria-label="Facebook" class="text-white hover:text-gold transition"><i class="fa-brands fa-facebook-f text-xl"></i></a><a href="#calculator" class="quote-btn bg-gold text-navy font-bold px-5 py-3 rounded-sm">Request a Quote</a></div>
+<button id="menuButton" class="lg:hidden text-2xl" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+</div>
+<div id="mobileMenu" class="mobile-menu pb-6"><nav class="flex flex-col gap-5 pt-4 text-sm font-semibold"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#calculator">Rough Quote</a><a href="#contact">Contact</a><a href="https://wa.me/27670558515" target="_blank" rel="noopener noreferrer" class="bg-gold text-navy text-center py-3 font-bold">Request a Quote</a></nav></div>
+</div></header>
+
+<section id="home" class="relative min-h-screen flex items-center bg-navy text-white">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=85')"></div>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24"><div class="max-w-3xl hero-content">
+<div class="flex items-center gap-4 mb-6 hero-label"><div class="gold-line"></div><span class="text-gold font-bold text-sm tracking-[0.2em]">LTD CONCEPTS</span></div>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 hero-title">TRANSFORMING SPACES.<br><span class="text-gold">BUILDING BETTER LIVES.</span></h1>
+<p class="text-lg md:text-xl text-gray-200 max-w-2xl leading-relaxed mb-9 hero-copy">Professional renovations and building solutions designed around quality workmanship, attention to detail and your vision.</p>
+<div class="flex flex-col sm:flex-row gap-4 hero-buttons"><a href="#calculator" class="quote-btn inline-flex justify-center items-center gap-3 bg-gold text-navy font-bold px-7 py-4 rounded-sm">Get a Rough Quote <i class="fa-solid fa-arrow-right"></i></a><a href="#services" class="inline-flex justify-center items-center gap-3 border border-white/60 hover:border-gold hover:text-gold px-7 py-4 rounded-sm font-semibold transition">Explore Services</a></div>
+</div></div><div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center"><div class="text-[10px] tracking-[0.3em] text-gray-300 mb-2">SCROLL</div><div class="w-px h-10 bg-gold mx-auto"></div></div>
+</section>
+
+<section class="bg-gold text-navy py-8"><div class="max-w-7xl mx-auto px-6 lg:px-8"><div class="flex flex-col md:flex-row items-center justify-between gap-5"><h2 class="text-xl md:text-2xl font-extrabold tracking-wide">ONE TEAM. ALL SOLUTIONS. BUILT WITH PURPOSE.</h2><a href="#contact" class="font-bold border-b-2 border-navy pb-1">Talk to our team</a></div></div></section>
+
+<section id="about" class="py-24 bg-white"><div class="max-w-7xl mx-auto px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="reveal"><div class="flex items-center gap-4 mb-5"><div class="gold-line"></div><span class="text-navy font-bold text-sm tracking-widest">WHY LTD CONCEPTS?</span></div><h2 class="text-4xl md:text-5xl font-extrabold text-navy leading-tight mb-6">Built on quality.<br><span class="text-gold">Driven by purpose.</span></h2><p class="text-gray-600 leading-relaxed mb-8">Every project is an opportunity to improve the way people live and work. We combine practical building expertise with careful workmanship to deliver spaces our clients can be proud of.</p><a href="#contact" class="inline-flex items-center gap-3 text-navy font-bold">Discuss your project <i class="fa-solid fa-arrow-right text-gold"></i></a></div>
+<div class="grid sm:grid-cols-2 gap-6">
+<div class="choice-item flex gap-4 reveal"><div class="choice-icon"><i class="fa-solid fa-hammer"></i></div><div><h3 class="font-bold text-navy mb-2">QUALITY WORKMANSHIP</h3><p class="text-sm text-gray-600">Built to last.</p></div></div>
+<div class="choice-item flex gap-4 reveal"><div class="choice-icon"><i class="fa-solid fa-clock"></i></div><div><h3 class="font-bold text-navy mb-2">RELIABLE & PROFESSIONAL</h3><p class="text-sm text-gray-600">On time, every time.</p></div></div>
+<div class="choice-item flex gap-4 reveal"><div class="choice-icon"><i class="fa-solid fa-ruler-combined"></i></div><div><h3 class="font-bold text-navy mb-2">ATTENTION TO DETAIL</h3><p class="text-sm text-gray-600">We don't just build, we perfect.</p></div></div>
+<div class="choice-item flex gap-4 reveal"><div class="choice-icon"><i class="fa-solid fa-users"></i></div><div><h3 class="font-bold text-navy mb-2">CUSTOMER FOCUSED</h3><p class="text-sm text-gray-600">Your vision, our mission.</p></div></div>
+</div></div></div></section>
+
+<section id="services" class="py-24 bg-gray-50"><div class="max-w-7xl mx-auto px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-14 reveal"><div class="flex justify-center items-center gap-4 mb-5"><div class="gold-line"></div><span class="text-navy font-bold text-sm tracking-widest">WHAT WE DO</span><div class="gold-line"></div></div><h2 class="text-4xl md:text-5xl font-extrabold text-navy mb-5">TYPES OF SERVICES</h2><p class="text-gray-600 leading-relaxed">From individual upgrades to complete renovations, our services are designed to cover the essential needs of your project.</p></div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service cards -->
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80" alt="Modern home renovation"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">01</div><h3 class="text-xl font-bold text-navy mb-3">Home Renovation</h3><p class="text-gray-600 text-sm leading-relaxed">Complete residential upgrades designed to refresh, modernise and improve your living space.</p></div></div>
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=80" alt="Plastered interior wall"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">02</div><h3 class="text-xl font-bold text-navy mb-3">Plastering</h3><p class="text-gray-600 text-sm leading-relaxed">Smooth, clean and durable plaster finishes for interior and exterior applications.</p></div></div>
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80" alt="Modern ceiling interior"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">03</div><h3 class="text-xl font-bold text-navy mb-3">Ceilings</h3><p class="text-gray-600 text-sm leading-relaxed">Professional ceiling installations and upgrades for clean, modern interiors.</p></div></div>
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80" alt="Decorative floor tiling"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">04</div><h3 class="text-xl font-bold text-navy mb-3">Tiling</h3><p class="text-gray-600 text-sm leading-relaxed">Precise floor and wall tiling with finishes selected to suit your space and budget.</p></div></div>
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1000&q=80" alt="Residential roof"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">05</div><h3 class="text-xl font-bold text-navy mb-3">Roof Cleaning</h3><p class="text-gray-600 text-sm leading-relaxed">Roof cleaning and maintenance to improve appearance and help protect your property.</p></div></div>
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="Waterproofing construction"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">06</div><h3 class="text-xl font-bold text-navy mb-3">Waterproofing</h3><p class="text-gray-600 text-sm leading-relaxed">Protective waterproofing solutions for roofs, walls, bathrooms and other vulnerable areas.</p></div></div>
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=1000&q=80" alt="Built in cupboards"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">07</div><h3 class="text-xl font-bold text-navy mb-3">Built-in Cupboards</h3><p class="text-gray-600 text-sm leading-relaxed">Custom storage solutions designed around your room, lifestyle and available space.</p></div></div>
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=1000&q=80" alt="Granite kitchen countertop"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">08</div><h3 class="text-xl font-bold text-navy mb-3">Granite Countertops</h3><p class="text-gray-600 text-sm leading-relaxed">Durable and refined countertop solutions for kitchens, bathrooms and custom spaces.</p></div></div>
+<div class="service-card bg-white overflow-hidden reveal"><div class="h-56 overflow-hidden"><img class="service-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1000&q=80" alt="Interior painting"></div><div class="p-7"><div class="text-gold text-xs font-bold tracking-widest mb-2">09</div><h3 class="text-xl font-bold text-navy mb-3">Painting</h3><p class="text-gray-600 text-sm leading-relaxed">Interior and exterior painting that gives your property a fresh, finished appearance.</p></div></div>
+</div></div></section>
+
+<section id="calculator" class="py-24 bg-navy text-white"><div class="max-w-6xl mx-auto px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-14 items-start">
+<div class="reveal"><div class="flex items-center gap-4 mb-5"><div class="gold-line"></div><span class="text-gold font-bold text-sm tracking-widest">ROUGH QUOTE</span></div><h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Get an idea of <span class="text-gold">your project cost.</span></h2><p class="text-gray-300 leading-relaxed mb-8">Enter a few basic details below and we'll provide a preliminary estimate. This is intended as a guide only; your final quotation will depend on the actual project, measurements, materials and site conditions.</p><div class="border border-white/10 p-6"><div class="text-gold text-2xl mb-3"><i class="fa-solid fa-calculator"></i></div><h3 class="font-bold text-lg mb-2">How it works</h3><p class="text-gray-400 text-sm leading-relaxed">Choose your service, enter the estimated area and select your preferred material quality. Your rough estimate will update instantly.</p></div></div>
+<div class="bg-white text-navy p-7 md:p-9 reveal"><form id="quoteForm">
+<div class="mb-5"><label for="customerName" class="calculator-label">Your Name</label><input id="customerName" type="text" class="calculator-input" placeholder="e.g. John Smith" required></div>
+<div class="mb-5"><label for="service" class="calculator-label">Service Required</label><select id="service" class="calculator-input" required><option value="">Select a service</option><option>Tiling</option><option>Tiling + Ceilings</option><option>Custom Cupboards</option><option>Painting</option><option>Waterproofing</option><option>Plastering</option><option>Roof Cleaning</option><option>Granite Countertops</option><option>Home Renovation</option></select></div>
+<div class="mb-5"><label for="area" class="calculator-label">Estimated Area</label><div class="flex"><input id="area" type="number" min="1" step="0.1" class="calculator-input rounded-r-none" placeholder="e.g. 50" required><span id="unitLabel" class="bg-gray-100 border border-l-0 border-gray-300 px-4 flex items-center text-sm font-semibold whitespace-nowrap">sqm</span></div></div>
+<div class="mb-6"><label for="quality" class="calculator-label">Material Quality</label><select id="quality" class="calculator-input" required><option value="standard">Standard</option><option value="premium">Premium</option></select></div>
+<button type="submit" class="calculate-btn w-full bg-navy text-white font-bold py-4 hover:bg-gold hover:text-navy transition">Calculate Rough Estimate</button>
+</form>
+<div id="quoteResult" class="quote-result hidden mt-7 bg-gray-50 p-5"><div class="text-xs uppercase tracking-widest font-bold text-gray-500 mb-2">Rough Estimate</div><div id="estimateAmount" class="text-4xl font-extrabold text-navy mb-3">R0</div><div id="estimateSummary" class="text-sm text-gray-600 mb-5"></div><button id="whatsappQuote" type="button" class="w-full bg-[#25D366] text-white font-bold py-4 flex items-center justify-center gap-3 hover:opacity-90 transition"><i class="fa-brands fa-whatsapp text-xl"></i>Send My Quote</button></div>
+</div></div></div></section>
+
+<section class="py-20 bg-gray-100"><div class="max-w-5xl mx-auto px-6 text-center reveal"><div class="flex justify-center mb-6"><div class="gold-line"></div></div><h2 class="text-4xl md:text-5xl font-extrabold text-navy mb-5">Ready to transform your space?</h2><p class="text-gray-600 max-w-2xl mx-auto mb-8">Tell us what you're planning and let's discuss how LTD Concepts can bring your vision to life.</p><a href="#calculator" class="quote-btn inline-flex items-center gap-3 bg-navy text-white font-bold px-8 py-4">Request a Quote <i class="fa-solid fa-arrow-right text-gold"></i></a></div></section>
+
+<section id="contact" class="py-24 bg-white"><div class="max-w-7xl mx-auto px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-12">
+<div class="reveal"><div class="flex items-center gap-4 mb-5"><div class="gold-line"></div><span class="text-navy font-bold text-sm tracking-widest">GET IN TOUCH</span></div><h2 class="text-4xl md:text-5xl font-extrabold text-navy mb-6">Let's build <span class="text-gold">something better.</span></h2><p class="text-gray-600 leading-relaxed mb-8">Have a renovation, repair or custom project in mind? Contact our team to discuss your requirements.</p>
+<div class="flex items-center gap-5 border-b border-gray-200 py-5"><div class="w-12 h-12 bg-navy text-gold flex items-center justify-center"><i class="fa-solid fa-user"></i></div><div><div class="font-bold text-navy">Pravasin</div><a href="tel:+27000000000" class="text-sm text-gray-500 hover:text-gold">Replace with flyer number</a></div></div>
+<div class="flex items-center gap-5 border-b border-gray-200 py-5"><div class="w-12 h-12 bg-navy text-gold flex items-center justify-center"><i class="fa-solid fa-user"></i></div><div><div class="font-bold text-navy">Stuart</div><a href="tel:+27000000000" class="text-sm text-gray-500 hover:text-gold">Replace with flyer number</a></div></div>
+<div class="flex items-center gap-5 border-b border-gray-200 py-5"><div class="w-12 h-12 bg-navy text-gold flex items-center justify-center"><i class="fa-solid fa-user"></i></div><div><div class="font-bold text-navy">Sholin</div><a href="tel:+27000000000" class="text-sm text-gray-500 hover:text-gold">Replace with flyer number</a></div></div>
+<div class="mt-8 flex items-center gap-3 text-navy font-bold"><i class="fa-solid fa-location-dot text-gold"></i>PROUDLY SERVING DURBAN & SURROUNDING AREAS</div></div>
+<div class="reveal"><div class="h-full min-h-[450px] bg-gray-200 relative overflow-hidden"><iframe class="absolute inset-0 w-full h-full border-0" loading="lazy" src="https://www.google.com/maps?q=Durban%2C%20South%20Africa&output=embed" title="Map of Durban, South Africa"></iframe></div></div>
+</div></div></section>
+
+<footer class="bg-navy text-white"><div class="max-w-7xl mx-auto px-6 lg:px-8 py-12"><div class="grid md:grid-cols-3 gap-10 items-start">
+<div><div class="font-extrabold text-xl mb-2">LTD <span class="text-gold">CONCEPTS</span></div><div class="text-xs tracking-[0.25em] text-gray-400">TRADE WITH PURPOSE</div></div>
+<div><h3 class="font-bold mb-4">Navigation</h3><div class="flex flex-col gap-2 text-sm text-gray-400"><a href="#home" class="hover:text-gold">Home</a><a href="#about" class="hover:text-gold">About</a><a href="#services" class="hover:text-gold">Services</a><a href="#calculator" class="hover:text-gold">Rough Quote</a><a href="#contact" class="hover:text-gold">Contact</a></div></div>
+<div><h3 class="font-bold mb-4">Connect</h3><div class="flex gap-4"><a href="https://wa.me/27670558515" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition"><i class="fa-brands fa-whatsapp"></i></a><a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition"><i class="fa-brands fa-facebook-f"></i></a></div></div>
+</div><div class="border-t border-white/10 mt-10 pt-6 text-sm text-gray-500">© <span id="currentYear"></span> LTD Concepts. All rights reserved.</div></div></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+gsap.registerPlugin(ScrollTrigger);
+gsap.timeline({defaults:{ease:"power3.out"}}).from(".hero-label",{opacity:0,y:25,duration:.7}).from(".hero-title",{opacity:0,y:45,duration:1},"-=.35").from(".hero-copy",{opacity:0,y:25,duration:.7},"-=.55").from(".hero-buttons",{opacity:0,y:20,duration:.6},"-=.4");
+gsap.utils.toArray(".reveal").forEach(e=>gsap.from(e,{scrollTrigger:{trigger:e,start:"top 88%",toggleActions:"play none none reverse"},opacity:0,y:45,duration:.8,ease:"power3.out"}));
+gsap.from(".service-card",{scrollTrigger:{trigger:"#services",start:"top 75%",toggleActions:"play none none reverse"},opacity:0,y:40,duration:.7,stagger:.12,ease:"power3.out"});
+gsap.from(".choice-item",{scrollTrigger:{trigger:".choice-item",start:"top 85%",toggleActions:"play none none reverse"},opacity:0,x:30,duration:.6,stagger:.12,ease:"power3.out"});
+document.querySelectorAll(".quote-btn,.calculate-btn").forEach(b=>{b.addEventListener("mouseenter",()=>gsap.to(b,{y:-3,scale:1.02,duration:.25,ease:"power2.out"}));b.addEventListener("mouseleave",()=>gsap.to(b,{y:0,scale:1,duration:.25,ease:"power2.out"}))});
+const menuButton=document.getElementById("menuButton"),mobileMenu=document.getElementById("mobileMenu");
+menuButton.addEventListener("click",()=>{mobileMenu.classList.toggle("open");const i=menuButton.querySelector("i");i.classList.toggle("fa-bars");i.classList.toggle("fa-xmark")});
+mobileMenu.querySelectorAll("a").forEach(l=>l.addEventListener("click",()=>{mobileMenu.classList.remove("open");const i=menuButton.querySelector("i");i.classList.remove("fa-xmark");i.classList.add("fa-bars")}));
+const pricing={"Tiling":{standard:300,premium:450,unit:"sqm"},"Tiling + Ceilings":{standard:500,premium:700,unit:"sqm"},"Custom Cupboards":{standard:2800,premium:4200,unit:"linear m"},"Painting":{standard:120,premium:180,unit:"sqm"},"Waterproofing":{standard:180,premium:280,unit:"sqm"},"Plastering":{standard:150,premium:220,unit:"sqm"},"Roof Cleaning":{standard:80,premium:120,unit:"sqm"},"Granite Countertops":{standard:2200,premium:3500,unit:"linear m"},"Home Renovation":{standard:1800,premium:3000,unit:"sqm"}};
+const form=document.getElementById("quoteForm"),service=document.getElementById("service"),quality=document.getElementById("quality"),area=document.getElementById("area"),unit=document.getElementById("unitLabel"),result=document.getElementById("quoteResult"),amount=document.getElementById("estimateAmount"),summary=document.getElementById("estimateSummary");let currentQuote=null;
+service.addEventListener("change",()=>unit.textContent=pricing[service.value]?.unit||"sqm");
+form.addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("customerName").value.trim(),s=service.value,a=parseFloat(area.value),q=quality.value;if(!name||!s||!a||a<=0)return;const p=pricing[s];let estimate=Math.max(a*p[q],2500);currentQuote={name,service:s,area:a,quality:q,unit:p.unit,estimate};amount.textContent="R"+Math.round(estimate).toLocaleString("en-ZA");summary.innerHTML=`<strong>${escapeHtml(s)}</strong><br>${a} ${p.unit} · ${q==="premium"?"Premium":"Standard"} materials<br><span class="text-xs text-gray-500">This is a rough estimate only and is not a formal quotation.</span>`;result.classList.remove("hidden");gsap.fromTo(result,{opacity:0,y:20},{opacity:1,y:0,duration:.5,ease:"power3.out"})});
+document.getElementById("whatsappQuote").addEventListener("click",()=>{if(!currentQuote)return;const m=`Hi LTD Concepts, I'd like a quote.\n\nService: ${currentQuote.service}\nArea: ${currentQuote.area} ${currentQuote.unit}\nMaterial quality: ${currentQuote.quality==="premium"?"Premium":"Standard"}\nRough estimate: R${Math.round(currentQuote.estimate).toLocaleString("en-ZA")}\n\nMy name is ${currentQuote.name}.\n\nI understand that this is a rough estimate and I'd like to discuss my project further.`;window.open(`https://wa.me/27670558515?text=${encodeURIComponent(m)}`,"_blank","noopener,noreferrer")});
+function escapeHtml(v){const d=document.createElement("div");d.textContent=v;return d.innerHTML}
+document.getElementById("currentYear").textContent=new Date().getFullYear();
+});
+</script>
+</body>
+</html>
